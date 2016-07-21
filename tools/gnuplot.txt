@@ -1,0 +1,8 @@
+unset key
+set datafile separator ";"
+set xlabel "x"
+set ylabel "y"
+set zlabel "z"
+splot filename using 2:3:4:5  w p pt 5 ps 1 palette
+pause mouse keypress
+
