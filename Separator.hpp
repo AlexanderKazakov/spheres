@@ -36,7 +36,7 @@ public:
 		int counter = 0;
 		real radiusExtensionRatio = FirstGuessRadiusExtensionRatio;
 		do {
-			assert(++counter < 100);
+			assert(++counter < 20);
 			radiusExtensionRatio = 1 + (radiusExtensionRatio - 1) / 2;
 			correctSpheresParameters(radiusExtensionRatio);
 			separatePointsBetweenExistingSpheres(radiusExtensionRatio);
@@ -149,8 +149,7 @@ private:
 	
 	
 	real estimateRadius(const PointIter) const {
-		assert(rMin == rMax); // TODO
-		return rMin;
+		return rMax;
 	}
 	
 	
